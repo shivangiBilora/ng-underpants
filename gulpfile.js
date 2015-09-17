@@ -18,4 +18,14 @@ gulp.task('copyIndex', function() {
       .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['webpack', 'copyIndex']);
+gulp.task('watch', function() {
+  gulp.watch([
+      'src/**/*.html',
+      'src/**/*.es6.js'
+    ], [
+      'webpack',
+      'copyIndex'
+    ]);
+});
+
+gulp.task('default', ['webpack', 'copyIndex', 'watch']);

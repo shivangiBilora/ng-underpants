@@ -2,6 +2,10 @@
   "name": "ng-underpants",
   "version": "1.0.0",
   "description": "Angular ES6 Seed Project utilizing gulp and webpack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikhildev/ng-underpants.git"
+  },
   "main": "src/app.es6.js",
   "devDependencies": {
     "babel-core": "^5.8.24",

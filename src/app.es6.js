@@ -1,11 +1,11 @@
 var angular = require('angular');
 var uiRouter = require('angular-ui-router');
 
-var app = angular.module('app', [
+var underpants = angular.module('underpants', [
   'ui.router'
   ]);
 
-app.controller('AppController', ['$scope', function ($scope) {
+underpants.controller('AppController', ['$scope', function ($scope) {
   console.log('AppController');
   $scope.message = 'World';
 }]);

@@ -1,2 +1,2 @@
-# ng-es6-seed
-Angular seed for ES6
+# ng-underpants
+Angular seed for Angular with ES6.

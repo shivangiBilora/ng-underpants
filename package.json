@@ -1,5 +1,5 @@
 {
-  "name": "ng-es6-seed",
+  "name": "ng-underpants",
   "version": "1.0.0",
   "description": "Angular ES6 Seed Project utilizing gulp and webpack",
   "main": "src/app.es6.js",

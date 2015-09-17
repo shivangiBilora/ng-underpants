@@ -15,9 +15,11 @@ module.exports = {
 
   module: {
     loaders: [
-      test: /\.es6.js$/,
-      loader: 'babel',
-      include: [/src/],  }
+      {
+        test: /\.es6.js$/,
+        loader: 'babel',
+        include: [/src/]
+      }
     ]
   },
 

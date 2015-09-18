@@ -1,11 +1,17 @@
-var angular = require('angular');
-var uiRouter = require('angular-ui-router');
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import ComponentsModule from './components/components.es6';
 
-var underpants = angular.module('underpants', [
-  'ui.router'
-  ]);
+let underpants = angular.module('underpants', [
+  uiRouter,
+  ComponentsModule.name
+]);
 
-underpants.controller('AppController', ['$scope', function ($scope) {
-  console.log('AppController');
-  $scope.message = 'World';
-}]);
+underpants.controller('MainController', MainController);
+
+function MainController($scope, $log) {
+  let vm = this;
+
+  vm.message = 'World';
+  $log.info('Initialized MainController. Setting message to ' + vm.message);
+}

@@ -1,5 +1,5 @@
 module.exports = {
-  devtool: 'sourcemap',
+  devtool: 'source-map',
 
   context: __dirname + '/src',
   entry: './app.es6.js',
@@ -7,8 +7,6 @@ module.exports = {
     path: __dirname + '/dist',
     filename: 'bundle.js'
   },
-
-
 
   cache: true,
   debug: true,

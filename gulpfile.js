@@ -20,13 +20,19 @@ gulp.task('copyIndex', function() {
       .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('copyPartials', function() {
+  return gulp.src('src/**/*.html')
+      .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('watch', function() {
   gulp.watch([
       'src/**/*.html',
       'src/**/*.es6.js'
     ], [
       'webpack',
-      'copyIndex'
+      'copyIndex',
+      'copyPartials'
     ]);
 });
 

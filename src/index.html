@@ -7,12 +7,7 @@
   </head>
 
   <body ng-controller="MainController">
-    <h1>ng-underpants</h1>
-
-    <p>
-      <input ng-model="message" />
-      <h3>Hello {{ message }}</h3>
-    </p>
+    <h2>ng-underpants</h2>
 
     <div ui-view></div>
 
@@ -31,7 +26,9 @@
     <!-- End of Third party Dependencies -->
 
     <!-- Application dependencies -->
+    <script type="text/javascript" src="vendors.js"></script>
     <script type="text/javascript" src="bundle.js"></script>
+
 
   </body>
 </html>

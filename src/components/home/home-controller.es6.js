@@ -1,14 +1,10 @@
-'use strict';
-
-//import angular from 'angular';
-
 import { HomeService } from './home-service.es6';
 
 class HomeController {
   /*@ngInject*/
 
   constructor($log, HomeService) {
-    var vm = this;
+    const vm = this;
     vm.HomeService_ = HomeService;
     vm.log_ = $log;
 

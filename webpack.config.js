@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -16,7 +17,14 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js', Infinity)
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js', Infinity),
+    new ngAnnotatePlugin({
+      add: true
+      // other ng-annotate options here
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin()
   ],
 
   cache: true,
@@ -43,6 +51,10 @@ module.exports = {
         exclude: [/node_modules/]
       }
     ]
+  },
+
+  resolve: {
+    modulesDirectories: ['node_modules']
   },
 
   noParse: [

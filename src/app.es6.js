@@ -12,7 +12,7 @@ class MainController {
 
 }
 
-let underpants = angular.module('underpants', [
+const underpants = angular.module('underpants', [
   uiRouter,
   ComponentsModule.name
 ]);

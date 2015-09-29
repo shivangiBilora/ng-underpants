@@ -14,7 +14,6 @@ class HomeService {
     }
 
   }
-
 }
 
 export { HomeService };

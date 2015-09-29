@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     gulpUtil = require('gulp-util'),
     webpack = require('webpack-stream');
+    //browserSync = require('browser-sync').create();
 
 gulp.task('webpack', function() {
   return gulp.src('src/app.es6.js')

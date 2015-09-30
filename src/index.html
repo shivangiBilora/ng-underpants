@@ -7,27 +7,68 @@
   </head>
 
   <body ng-controller="MainController">
-    <h2>ng-underpants</h2>
 
-    <div ui-view></div>
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--waterfall">
+        <!-- Top row, always visible -->
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">NG UNDERPANTS</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="waterfall-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="waterfall-exp" />
+            </div>
+          </div>
+        </div>
+        <!-- Bottom row, not visible on scroll -->
+        <div class="mdl-layout__header-row">
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" ui-sref="home">Home</a>
+            <a class="mdl-navigation__link" ui-sref="flickr">Flickr</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">NG UNDERPANTS</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" ui-sref="home">Home</a>
+          <a class="mdl-navigation__link" ui-sref="flickr">Flickr</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content"ui-view></div>
+      </main>
+    </div>
+
+
+
 
     <!-- Beginning of Third party Dependencies -->
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-    <!-- Twitter Bootstrap -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.red-blue.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- Normalize.css -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 
     <!-- End of Third party Dependencies -->
 
     <!-- Application dependencies -->
     <script type="text/javascript" src="vendors.js"></script>
     <script type="text/javascript" src="bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
 
   </body>
 

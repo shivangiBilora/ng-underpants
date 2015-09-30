@@ -16,4 +16,9 @@ const underpants = angular.module('underpants', [
   uiRouter,
   ComponentsModule.name
 ]);
+
+underpants.run(function($state) {
+  $state.go('home');
+});
+
 underpants.controller('MainController', MainController);

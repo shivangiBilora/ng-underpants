@@ -31,6 +31,7 @@
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "latest",
     "gulp-util": "^3.0.6",
+    "browser-sync" : "^2.9.8",
     "ng-annotate-webpack-plugin": "^0.1.2",
     "npm": "^3.3.3",
     "webpack": "^1.12.1",

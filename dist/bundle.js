@@ -60,7 +60,7 @@ webpackJsonp([1],[
 
 	  this.http_ = $http;
 	  this.log_ = $log;
-	  $log.info('Initialized Flickr service');
+	  $log.info('Initialized FlickrService');
 	}]
 
 	//getGithubUser(userName) {

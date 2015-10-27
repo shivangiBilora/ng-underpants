@@ -46,7 +46,8 @@ gulp.task('watch', function() {
   gulp.watch(paths.html, ['copyHtml']);
   gulp.watch(paths.js, ['webpack']);
   browserSync.init({
-    server:"./dist"
+    server:"./dist",
+    scrollRestoreTechnique: 'cookie'
   })
 });
 
